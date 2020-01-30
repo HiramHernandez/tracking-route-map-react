@@ -1,0 +1,243 @@
+/**first clasess*/
+/*Menu*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.men_ex{
+    border-radius:5px;
+    margin: 0 auto;
+}
+.men_ex ul {
+    width:1200px;
+    list-style-type: none;
+}
+.men_ex ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: #020202;
+    padding: 10.5px 11px;
+    background-color: #9DC5DA;
+    display:block;
+    border-bottom:solid 1px #000;
+}
+
+men_ex ul li a:hover{
+    background: #eee;
+}
+
+men_ex ul li a:hover:before{
+    transform: rotate(360deg);
+}
+.invisible {
+  visibility : hidden
+}
+.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} /* Red */
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;} /* Gray */
+.default:hover {background: #ddd;}
+
+/*formatos de tabla*/
+
+/* Curso CSS aprenderaprogramar.com */
+#table-scroll {
+  height:150px;
+  overflow:auto;
+  margin-top:20px;
+}
+table {
+  /*width:500px;*/
+  overflow:scroll;
+  height: auto;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  /*width: 640px;*/
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid transparent;
+  height: 20px;
+}
+th {
+  background: #D3D3D3;
+  font-weight: bold;
+}
+td {
+  background: #FAFAFA;
+  text-align: center;
+}
+tr:nth-child(even) td {
+  background: #F1F1F1;
+}
+tr:nth-child(odd) td {
+  background: #FEFEFE;
+}
+tr td:hover {
+  background: #666; color: #FFF;
+}
+
+/* * El listado de las rutas * */
+
+#lista2 {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+#lista2 ol {
+
+    margin: 0 0 0 2em;
+}
+
+#lista2 li{
+    position: relative;
+    display: block;
+    width: 1200px;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .9em;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+}
+
+#lista2 li:hover{
+    background: #eee;
+}
+
+#lista2 li:hover:before{
+    transform: rotate(360deg);
+}
+
+#lista2 li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+/** PESTAÑAS **/
+#container {
+ margin: 0 auto;
+ width: 100%; /* Ancho del contenedor */
+ height: 100%;
+}
+#container input {
+ height: 2.5em;
+ visibility: hidden;
+}
+#container label {
+ background: #f9f9f9; /* Fondo de las pestañas */
+ border-radius: .25em .25em 0 0;
+ color: #888; /* Color del texto de las pestañas */
+ cursor: pointer;
+ display: block;
+ float: left;
+ font-size: 1em; /* Tamaño del texto de las pestañas */
+ height: 2.5em;
+ line-height: 2.5em;
+ margin-right: .25em;
+ padding: 0 1.5em;
+ text-align: center;
+}
+#container input:hover + label {
+ background: #ddd; /* Fondo de las pestañas al pasar el cursor por encima */
+ color: #666; /* Color del texto de las pestañas al pasar el cursor por encima */
+}
+#container input:checked + label {
+ background: #f1f1f1; /* Fondo de las pestañas al presionar */
+ color: #444; /* Color de las pestañas al presionar */
+ position: relative;
+ z-index: 6;
+}
+#content {
+ background: #f1f1f1; /* Fondo del contenido */
+ border-radius: 0 .25em .25em .25em;
+ min-height: 20em; /* Alto del contenido */
+ position: relative;
+ width: 100%;
+ height: 500px;
+ z-index: 5;
+}
+#content div {
+  overflow: scroll;
+  height:500px;
+  /*width:500px;*/
+  opacity: 0;
+  padding: 1.5em;
+  position: absolute;
+  z-index: -100;
+}
+#content-1 p {
+ clear: both;
+ margin-bottom: 1em;
+}
+#content-1 p.left img {
+ float: left;
+ margin-right: 1em;
+}
+#content-1 p.last {
+ margin-bottom: 0;
+}
+#content-2 p {
+ float: left;
+ width:100%;
+}
+#content-2 p.column-right {
+ margin-left: 3%;
+}
+#content-2 p img {
+ display: block;
+ margin: 0 auto 1em auto;
+}
+#content-3 p,
+#content-3 ul {
+ margin-bottom: 1em;
+}
+#content-3 ul {
+ margin-left: 2em;
+}
+#container input#tab-1:checked ~ #content #content-1,
+#container input#tab-2:checked ~ #content #content-2,
+#container input#tab-3:checked ~ #content #content-3 {
+ opacity: 1;
+ z-index: 100;
+}
