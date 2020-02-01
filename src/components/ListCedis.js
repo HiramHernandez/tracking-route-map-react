@@ -15,7 +15,7 @@ class ListCedis extends React.Component {
     async componentDidMount() {
       const responseJson =  await getCedis()
       this.setState({ cedis: responseJson.data, isFetch: false })
-      console.log(responseJson)
+      
     }
   
     handleSearch = (search) => {
@@ -28,23 +28,25 @@ class ListCedis extends React.Component {
       if (isFetch){
           return 'Loading...'
       }
+      
       return (
-
         <React.Fragment>
             <section className="memes-container">
-            <h1>Cedis Tracking App</h1>
-            <div className="men_ex" id="mainmenu">
-                {
-                    cedis['memes'].map((cedi) => <CedisComponent 
-                        id={cedi.id}
-                        name={cedi.name}
-                    />)
-                }
-           </div>
-           </section>
-        </React.Fragment>
+              <h1>Cedis Tracking App</h1>
+              <div className="men_ex" id="mainmenu">
+                  {
+                      cedis.map((cedi) => <CedisComponent 
+                          id={cedi.id_cedis}
+                          name={cedi.nombre}
+                      />)
+                  }
+              </div>
+            </section>
+          </React.Fragment>
       )
     }
+
+
   }
   
 
